@@ -78,3 +78,15 @@ div[name="c9"]{
 .botonAgregarColor{
     background-color: #4CAF50; 
 }
+
+/* ==========================================================================
+Media queries (responsive)
+========================================================================== */
+
+@media (max-width: 768px) {
+h1 { font-size: 2rem; }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
