@@ -37,3 +37,44 @@ main {
         text-align: center;
         width: 100%;
 }
+
+/* ==========================================================================
+Componentes
+========================================================================== */
+
+div[name="c1"]{
+    background-color:#1A237E;    
+}
+
+div[name="c2"]{
+    background-color:#3D5AFE;    
+}
+
+div[name="c3"]{
+    background-color:#00E5FF;    
+}
+
+div[name="c4"]{
+    background-color:#00C853;    
+}
+div[name="c5"]{
+    background-color:#1A237E;    
+}
+div[name="c6"]{
+    background-color:#FFC107;    
+}
+div[name="c7"]{
+    background-color:#FF7043;    
+}
+div[name="c8"]{
+    background-color:#F50057;    
+}
+div[name="c9"]{
+    background-color:#455A64;    
+}
+
+
+
+.botonAgregarColor{
+    background-color: #4CAF50; 
+}
