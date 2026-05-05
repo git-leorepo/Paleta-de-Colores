@@ -42,3 +42,7 @@ function anadirItem(){
         alert('No puedes generar mas colores')
     }
 }
+
+
+
+
