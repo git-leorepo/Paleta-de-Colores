@@ -60,5 +60,13 @@ function cambiarColor() {
 }
 
 
+/*LLAMADO DE LAS FUNCIONES*/
+
+//Al hacer click en Generar Paleta se acciona el addEventListener
+btnGenerarPaleta.addEventListener('click', cambiarColor);
+//Al hacer click en Añadir Item se acciona el addEventListener
+btnAgregarItem.addEventListener('click', anadirItem)
+
+
 
 
