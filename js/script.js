@@ -44,5 +44,21 @@ function anadirItem(){
 }
 
 
+//Funcion cambiar color: Cambia de paleta de colores al darle clic al boton
+
+function cambiarColor() {
+    // Seleccionamos TODOS los elementos que tengan la clase 'colores' en este instante
+    const todosLosColores = document.querySelectorAll('.colores');
+
+    // Usamos un bucle para asignar los colores de la paleta dinámicamente
+    todosLosColores.forEach((elemento, index) => {
+        // Verificamos que exista un color en la paleta para este índice
+        if (paletaUno[index]) {
+            elemento.style.backgroundColor = paletaDos[index];
+        }
+    });
+}
+
+
 
 
