@@ -12,83 +12,83 @@ Layout
 
 /* HEADER */
 header{
-    background-color: yellow;
+    background-color:  #b5d0df;
     display: flex;
     justify-content: center;    
 }
 
 .titulo-clase{
-    background-color: #DDEFF9;    
-    width: 90%;
-    
+    /* background-color: #DDEFF9;  */
+    background-color: #b5d0df;   
+    width: 90%;   
+    display: flex;
+    /* margin-top: 10px;
+    margin-bottom: 10px; */
+}
+.logo-sitio{
+    width: 100px; /* Ajusta el ancho según lo necesites */
+    height: auto;  /* Esto mantiene la proporción original para que no se deforme */
+    margin-right: 0;
 }
 
+.titulo-proyecto{
+    font-family: "Story Script", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    size: 10px;
+
+}
+
+/*CONTROLES*/
+.class-controles{
+    background-color: aquamarine;    
+    display: flex;
+    justify-content: center
+    ;
+}
+.clase-articulo-botones{
+    width: 90%;
+    background-color: blue;
+
+
+}
 
 /* MAIN */
 main {
     display: flex;
     justify-content: center;
+    background-color: pink;
 }
 
-.contenedor{
-    display: flex;
-    background-color: gray;    
-    padding: 0px;
-    margin-top: 2rem;
+.contenedor{    
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
     width: 90%;
-    height: 500px;
-    margin-bottom: 3rem;    
-
+    height: 60%px;
+    background-color: yellow;
+    gap: 0.5 rem;
+    
+}
+.class-container {
+  /* position: relative;   */
+  width: 95%;
+  height: 250px;
+  margin: 20px auto;
+  background-color: black;
 }
 
-.colores{
-        background-color: #4CAF50;
-        color: white;           
-        padding: 20px;        
-        text-align: center;
-        width: 100%;
-}
 
 /* ==========================================================================
 Componentes
 ========================================================================== */
 
-div[name="c1"]{
-    background-color:#1A237E;    
-}
-
-div[name="c2"]{
-    background-color:#3D5AFE;    
-}
-
-div[name="c3"]{
-    background-color:#00E5FF;    
-}
-
-div[name="c4"]{
-    background-color:#00C853;    
-}
-div[name="c5"]{
-    background-color:#1A237E;    
-}
-div[name="c6"]{
-    background-color:#FFC107;    
-}
-div[name="c7"]{
-    background-color:#FF7043;    
-}
-div[name="c8"]{
-    background-color:#F50057;    
-}
-div[name="c9"]{
-    background-color:#455A64;    
-}
 
 
 
-.botonAgregarColor{
-    background-color: #4CAF50; 
-}
+
+
 
 /* ==========================================================================
 Media queries (responsive)
