@@ -23,12 +23,12 @@ function generarAleatorio(){
 
 //Funcion para generar colores aleatorios en formato hexadecimal
 function generarHexadecimal() {
-  const caracteresHexadecimales = "0123456789ABCDEF";
-  let hexadecimal = "#";
-  for (let i = 0; i < 6; i++) {
-    hexadecimal += caracteresHexadecimales[Math.floor(Math.random() * 16)];
-  }
-  return hexadecimal;
+    const caracteresHexadecimales = "0123456789ABCDEF";
+    let hexadecimal = "#";
+    for (let i = 0; i < 6; i++) {
+        hexadecimal += caracteresHexadecimales[Math.floor(Math.random() * 16)];
+    }
+    return hexadecimal;
 }
 
 
@@ -54,11 +54,14 @@ function crearCard(){
         nuevoArticle.classList.add("class-container");
         // creo el div que es la card
         const nuevoDiv = document.createElement("div");
-        nuevoDiv.classList.add("layer-top")
+        nuevoDiv.classList.add("layer-top");
+        const colorAleatorio = generarHexadecimal();
+        nuevoDiv.style.backgroundColor = colorAleatorio;
+
         //creo el parrafo que tiene el nombre del color
         const parrafoColor = document.createElement("p");        
         parrafoColor.classList.add("texto-color");
-        parrafoColor.textContent = "color"
+        parrafoColor.textContent = colorAleatorio;
 
         seccionContenedor.appendChild(nuevoArticle);
         nuevoArticle.appendChild(nuevoDiv);
