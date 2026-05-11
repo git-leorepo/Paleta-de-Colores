@@ -125,7 +125,7 @@ h1 { font-size: 2rem; }
 
 /**/
 /* En tu archivo styles.css */
-@keyframes flipIn {
+/* @keyframes flipIn {
     from {
         opacity: 0;
         transform: rotateY(-90deg);
@@ -138,4 +138,19 @@ h1 { font-size: 2rem; }
 
 .class-container {
     animation: flipIn 1.8s ease-out forwards;
+} */
+
+@keyframes zoomRotate {
+    0% {
+        opacity: 0;
+        transform: perspective(600px) rotateZ(-180deg) scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: perspective(600px) rotateZ(0deg) scale(1);
+    }
+}
+
+.class-container {
+    animation: zoomRotate 1.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
