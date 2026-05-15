@@ -15,15 +15,18 @@ header{
     /* background-color:  #b5d0df; */
     background-color: black;
     display: flex;
-    justify-content: center;    
+    justify-content: center;
+    height: 90px;    
 }
 
 .titulo-clase{
     /* background-color: #DDEFF9;  */
     /* background-color: #b5d0df;    */
     background-color: black;
-    width: 90%;   
+    width: 90%;       
     display: flex;
+    justify-content: center;
+    align-items: center;
     /* margin-top: 10px;
     margin-bottom: 10px; */
 }
@@ -34,12 +37,12 @@ header{
 }
 
 .titulo-proyecto{
-    font-family: "Story Script", sans-serif;
-    font-weight: 400;
+    font-family: "DynaPuff", system-ui;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
     font-style: normal;
+    font-variation-settings:"wdth" 100;
     color: white;
-    
-
 }
 
 /*CONTROLES*/
