@@ -15,6 +15,8 @@ const radioBtnColorSelected = document.querySelectorAll('input[name="tipo_color"
 //Boton Generar Paleta
 const btnGenerarPaleta = document.querySelector('.btn-clase-paleta');
 
+const contenedorMensaje = document.querySelector("#mensaje-alerta");
+
 
 /*FUNCIONES*/
 
@@ -98,6 +100,7 @@ function anadirCard(){
         console.log(i)
     }while(i<parseInt(valor))
     i=1;
+    //alert(`Se han generado ${valor} colores!`)
 }
 
 //Funcion para crear el elemento card y todo lo que conlleva adentro del article, como el div y el parrafo con el nombre del color
@@ -122,7 +125,18 @@ function crearCard(){
         nuevoArticle.appendChild(parrafoColor);
 }
 
-// Generar cards por defecto cuando carga la página
+/* 2. NUEVA FUNCIÓN PARA MOSTRAR EL MENSAJE (Añádela en la sección de funciones) */
+function mostrarMensajeWeb(texto) {
+    contenedorMensaje.textContent = texto;
+    contenedorMensaje.classList.add("mostrar");
+
+    // El mensaje se ocultará automáticamente después de 3 segundos
+    setTimeout(() => {
+        contenedorMensaje.classList.remove("mostrar");
+    }, 3000);
+}
+
+/* // Generar cards por defecto cuando carga la página
 anadirCard()
 
 //Añadirme las tarjetas cada vez que se cambie el valor del radio button de cantidad de colores
@@ -132,7 +146,32 @@ radioBtnColor.addEventListener('change', anadirCard)
 radioBtnColorSelected.forEach(input => input.addEventListener('change', updateCardText));
 
 // Agregar event listener al botón Generar Paleta
-btnGenerarPaleta.addEventListener('click', anadirCard);
+btnGenerarPaleta.addEventListener('click', anadirCard); */
+
+
+
+// Al cambiar la cantidad de colores (Radio Button)
+radioBtnColor.addEventListener('change', () => {
+    anadirCard(); // Ejecuta tu función existente
+    
+    // Obtenemos el valor actual para el mensaje
+    const radioBtnSeleccionado = document.querySelector('input[name="palette-size"]:checked');
+    const valor = radioBtnSeleccionado ? radioBtnSeleccionado.value : 6;
+    
+    // Mostramos el mensaje en la web
+    mostrarMensajeWeb(`✨ Cantidad modificada: ¡Ahora mostrando ${valor} colores!`);
+});
+
+// Al hacer clic en el botón "Generar Paleta"
+btnGenerarPaleta.addEventListener('click', () => {
+    anadirCard(); // Ejecuta tu función existente
+    
+    // Mostramos el mensaje en la web
+    mostrarMensajeWeb("🎨 ¡Nueva paleta de colores generada con éxito!");
+});
+
+// Este se queda exactamente igual
+radioBtnColorSelected.forEach(input => input.addEventListener('change', updateCardText));
 
 
 

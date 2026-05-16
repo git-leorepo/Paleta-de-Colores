@@ -282,6 +282,24 @@ main {
     margin-bottom: 1rem;
 } */
 
+#mensaje-alerta {
+    padding: 10px 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: var(--fondo-pagina);
+    color: #6E8F57;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.3s ease;
+    opacity: 0; /* Oculto por defecto */
+    font: var(--fuente-principal);
+}
+
+/* Clase que añadiremos con JavaScript para mostrarlo */
+#mensaje-alerta.mostrar {
+    opacity: 1;
+}
+
 
 
 /* ==========================================================================
