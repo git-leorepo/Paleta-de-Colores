@@ -39,7 +39,7 @@ header{
 .titulo-proyecto{
     font-family: "DynaPuff", system-ui;
     font-optical-sizing: auto;
-    font-weight: <weight>;
+    font-weight: weight;
     font-style: normal;
     font-variation-settings:"wdth" 100;
     color: white;
@@ -49,15 +49,16 @@ header{
 .class-controles{
     background-color: aquamarine;    
     display: flex;
-    justify-content: center
-    ;
+    justify-content: center;    
 }
 .clase-articulo-botones{
     display: flex;
     width: 90%;
-    gap: 2 rem;
+    gap: 2rem;
     background-color: white;
-    justify-content: space-between;    
+    justify-content: flex-start;    
+    align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 #contenedor-radio-colores{
@@ -69,6 +70,7 @@ header{
     margin-bottom: 1rem;
     border: none;
     padding: 0;
+    font-size: 0.7rem;
 }
 
 
@@ -91,35 +93,47 @@ header{
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     position: relative;
     user-select: none;
-    font-family: "Story Script", sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 #contenedor-radio-colores label:hover {
     background: linear-gradient(135deg, #e8e8e8 0%, #d8d8d8 100%);
-    border-color: #b5d0df;
+    /* border-color: #b5d0df; */
+    border-color: rgb(0, 221, 255);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(181, 208, 223, 0.3);
 }
 
 /* Estado seleccionado */
-#contenedor-radio-colores input[type="radio"]:checked + label {
-    /* background: linear-gradient(135deg, #b5d0df 0%, #7db3d3 100%); */
-    background: linear-gradient(135deg, black 0%, black 100%);
-    border-color: white;
-    color: white;
+#contenedor-radio-colores input[type="radio"]:checked + label {    
+    background: rgb(53, 50, 50);
+    border-color: rgb(0, 221, 255);
+    color: rgb(0, 221, 255);
     box-shadow: 0 6px 16px rgba(90, 159, 201, 0.4);    
     transform: scale(1.05);
-    font-family: "Story Script", sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 #contenedor-radio-colores input[type="radio"]:checked + label::before {
     content: "✓ ";
     font-weight: bold;
-    margin-right: 5px;
+    margin-right: 3px;
 }
 
+/*Contenedor de radio buttons para elegir el Tipo Color*/
+
+
 #division-radiobuttom{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
     margin-right: 2rem;
+}
+
+#tipo-color{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 0.8rem;
+    color: black;
 }
 
 
