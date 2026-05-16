@@ -2,8 +2,12 @@
 Variables y utilidades
 ========================================================================== */
 :root{
-    --azul-paleta:  rgb(0, 221, 255);
+    /* --azul-paleta:  rgb(0, 221, 255);
+    --azul-paleta: #71EB14; */
+    --azul-paleta: #8FDE52;
     /* --azul-paleta: rgb(191, 245, 64); */
+    --fuente-principal: font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --fondo-pagina: #E8EDE4;
 }
 
 /* ==========================================================================
@@ -52,7 +56,7 @@ header{
 /*CONTROLES*/
 /*100% de la pagina*/
 .class-controles{
-    background-color: aquamarine;    
+    background-color: var(--fondo-pagina);    
     display: flex;
     justify-content: center;    
 }
@@ -64,8 +68,8 @@ header{
     gap: 2rem;
     background-color: white;
     justify-content: flex-start;    
-    align-items: center;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    align-items: center;    
+    background-color: var(--fondo-pagina);
 }
 
 /*1. Contiene la cantidad de colores 6, 8 y 9 colores*/
@@ -79,6 +83,7 @@ header{
     border: none;
     padding: 0;
     font-size: 0.7rem;
+    
 }
 
 
@@ -100,7 +105,7 @@ header{
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     position: relative;
     user-select: none;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: var(--fuente-principal);
 }
 
 #contenedor-radio-colores label:hover {
@@ -118,7 +123,7 @@ header{
     color: var(--azul-paleta);
     box-shadow: 0 6px 16px rgba(90, 159, 201, 0.4);    
     transform: scale(1.05);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: var(--fuente-principal);
 }
 
 #contenedor-radio-colores input[type="radio"]:checked + label::before {
@@ -137,7 +142,7 @@ header{
 }
 /*fuente del label tipo color*/
 #tipo-color{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: var(--fuente-principal);
     font-size: 0.7rem;
     color: black;
 }
@@ -149,7 +154,7 @@ header{
 }
 
 #division-radiobuttom label {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: var(--fuente-principal);
     font-size: 0.7rem;
     color: black;
 }
@@ -174,7 +179,7 @@ header{
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     position: relative;
     user-select: none;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: var(--fuente-principal);
 }
 
 #btn-generar-paleta:hover{
@@ -188,7 +193,7 @@ header{
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     position: relative;
     user-select: none;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: var(--fuente-principal);
 }
 
 /* Efecto al hacer clic */
@@ -196,26 +201,29 @@ header{
     transform: translateY(1px); /* Se hunde ligeramente al presionarlo */
 }
 
-
+body{
+    background-color: var(--fondo-pagina);
+}
 
 /* MAIN */
 main {
     display: flex;
     justify-content: center;
-    background-color: pink;       
+    background-color: var(--fondo-pagina);
+    height: 100%;       
 }
 
 .contenedor{    
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    justify-items: end;
+    grid-template-columns: repeat(5, 1fr);   
+    justify-items: center; 
     width: 90%;    
-    background-color: white;
+    background-color: var(--fondo-pagina);
     gap: 0.5 rem;    
 }
 .class-container {  
-    width: 75%;
-    height: 250px;
+    width: 70%;
+    height: 220px;    
     margin: 20px auto;
     background-color: black;
     border-radius: 20px;
@@ -231,9 +239,13 @@ main {
 .texto-color{
     text-align: center;
     color: white;
+    font: var(--fuente-principal);
+    font-size: 0.875rem;
+    font-weight: 650;
+    
 }
 
-.contenedor-seccion{
+/* .contenedor-seccion{
     display: flex;
     justify-content: center;
     background-color: yellow;
@@ -246,13 +258,13 @@ main {
     background-color: tomato;
     margin-top: 3rem;
     margin-bottom: 3rem;
-}
+} */
 
 
 
 
 /* FOOTER */
-#footer{
+/* #footer{
     display: flex;
     justify-content: center;           
     width: 100%;
@@ -268,7 +280,7 @@ main {
     background-color: white;
     margin-top: 1rem;
     margin-bottom: 1rem;
-}
+} */
 
 
 
